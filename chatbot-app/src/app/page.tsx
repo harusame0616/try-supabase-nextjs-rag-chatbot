@@ -16,7 +16,7 @@ export default function Home() {
       <div className="max-w-2xl w-full flex justify-end h-80 flex-col items-center">
         <h1 className="font-bold text-2xl">AI チャットボット</h1>
         <form className="w-full mt-8 flex gap-1" method="GET" action="/chat">
-          <Input name="query" />
+          <Input name="query" placeholder="募集要項を教えて下さい" />
           <Button>質問する</Button>
         </form>
       </div>
