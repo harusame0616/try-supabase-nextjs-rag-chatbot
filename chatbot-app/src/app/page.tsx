@@ -27,7 +27,7 @@ export default function Home() {
   );
 }
 
-export async function registerDocument() {
+async function registerDocument() {
   "use server";
   const url = process.env.SUPABASE_URL;
   const supabaseKey = process.env.SUPABASE_KEY;
