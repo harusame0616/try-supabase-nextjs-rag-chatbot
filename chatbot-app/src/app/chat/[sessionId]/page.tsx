@@ -38,9 +38,6 @@ export default function Page() {
               <span className="text-sm text-gray-500">AI アシスタント</span>
               <Balloon>
                 <RefreshCcw className="animate-spin" />
-                <button type="button" onClick={() => stop()}>
-                  Stop
-                </button>
               </Balloon>
             </div>
           )}
