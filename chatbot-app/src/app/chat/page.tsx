@@ -33,7 +33,7 @@ export default function Page() {
   return (
     <div className="h-full flex flex-col">
       <h1 className="p-4 font-bold text-2xl text-center">
-        <Link href="/">AI チャットボット</Link>
+        <Link href="/">求人AI アシスタント</Link>
       </h1>
       <div className="flex-grow flex flex-col overflow-hidden items-center">
         <div className="flex-grow overflow-y-scroll w-full p-4 max-w-2xl">
