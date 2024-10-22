@@ -85,6 +85,8 @@ export default function Page() {
 
 function Balloon({ children }: PropsWithChildren) {
   return (
-    <div className="p-4 border w-full max-w-96 rounded-md">{children}</div>
+    <div className="p-4 border w-full max-w-96 rounded-md whitespace-pre-wrap">
+      {children}
+    </div>
   );
 }
