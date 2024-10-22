@@ -82,6 +82,7 @@ export default function Chat({ initialQuery }: { initialQuery: string }) {
               value={input}
               onChange={handleInputChange}
               disabled={isLoading}
+              required
             />
             <Button type="submit">送信</Button>
           </form>
