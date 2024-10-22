@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import { useChat } from "ai/react";
 import { RefreshCcw } from "lucide-react";
 import Link from "next/link";
-import { PropsWithChildren, useEffect } from "react";
+import { PropsWithChildren, useEffect, useRef } from "react";
 
 export default function Chat({ initialQuery }: { initialQuery: string }) {
   const {
@@ -21,11 +21,19 @@ export default function Chat({ initialQuery }: { initialQuery: string }) {
     keepLastMessageOnError: true,
     initialMessages: [{ id: "1", role: "user", content: initialQuery }],
   });
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (isLoading) return;
     reload();
   }, []);
+
+  useEffect(() => {
+    ref.current?.scrollTo({
+      top: ref.current?.scrollHeight,
+      behavior: "smooth",
+    });
+  }, [messages]);
 
   return (
     <div className="h-full flex flex-col">
@@ -33,7 +41,10 @@ export default function Chat({ initialQuery }: { initialQuery: string }) {
         <Link href="/">求人AI アシスタント</Link>
       </h1>
       <div className="flex-grow flex flex-col overflow-hidden items-center">
-        <div className="flex-grow overflow-y-scroll w-full p-4 max-w-2xl">
+        <div
+          className="flex-grow overflow-y-scroll w-full p-4 max-w-2xl"
+          ref={ref}
+        >
           <div>
             {messages.map((message) => (
               <div key={message.id}>
