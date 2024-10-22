@@ -12,6 +12,7 @@ export async function POST(req: Request) {
   const openai = createOpenAI({
     apiKey: openAIApiKey,
   });
+  console.log(messages);
 
   const kyuujins = await searchKyuujin(messages.at(-1).content);
 
