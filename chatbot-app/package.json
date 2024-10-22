@@ -18,7 +18,13 @@
     "react": "^18",
     "react-dom": "^18",
     "tailwind-merge": "^2.5.4",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "@ai-sdk/openai": "^0.0.68",
+		"@langchain/community": "^0.3.7",
+		"@langchain/core": "^0.3.13",
+		"@langchain/openai": "^0.3.11",
+		"@supabase/supabase-js": "^2.45.6",
+		"ai": "^3.4.16"
   },
   "devDependencies": {
     "@types/node": "^20",
